@@ -1,0 +1,14 @@
+<div class="carousel">
+    <div class="wrap">
+        <!-- 左箭头 -->
+        <i nz-icon class="arrow left" nzType="left" nzTheme="outline" (click)="onChangeSlide('pre')"></i>
+        <!-- 轮播图插槽 -->
+        <ng-content></ng-content>
+        <!-- 小圆点 -->
+        <ng-template #dot let-number>
+            <i class="dot" [class.active]="activeIndex === number"></i>
+        </ng-template>
+        <!-- 右箭头 -->
+        <i nz-icon class="arrow right" nzType="right" nzThme="outline" (click)="onChangeSlide('next')"></i>
+    </div>
+</div>
